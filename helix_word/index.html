@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spiral Text Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any additional CSS styles for your characters if needed */
+        .character {
+            display: inline-block;
+            font-size: 48px;
+            /* Add more styles as required */
+        }
+
+        .spiral-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+		
+		/*new*/
+		
+		  #wordForm {
+            text-align: center;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+        }
+		
+		#wordInput {
+            font-size: 18px;
+			padding: 8px;
+			margin-bottom: 16px;
+			width: 200px; /* Adjust the width as needed */
+			border: 2px solid #fff;
+			border-radius: 5px;
+			background-color: rgba(255, 255, 255, 0.1);
+			color: #fff;
+        }
+		
+		 button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+		
+    </style>
+</head>
+<body>
+
+	<form id="wordForm">
+        <label for="wordInput" style="color: #fff;">Enter a word:</label>
+        <input type="text" id="wordInput" required>
+        <button type="button" onclick="startAnimation()">Start Animation</button>
+    </form>
+	
+	
+    <div id="spiral" class="spiral-container"></div>
+    <div id="spiral2" class="spiral-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
